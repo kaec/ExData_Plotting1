@@ -21,13 +21,11 @@ createPng3 <- function ()
        ylab = "Energy sub metering", 
        xlab = "", 
        type="l")
-  points(subsetData$Time,
+  lines(subsetData$Time,
          subsetData$Sub_metering_2,
-         type = "l",
          col = "red")
-  points(subsetData$Time,
+  lines(subsetData$Time,
          subsetData$Sub_metering_3,
-         type = "l",
          col = "blue")
   legend("topright",
          legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
